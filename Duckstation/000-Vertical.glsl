@@ -9,7 +9,7 @@ StepAmount = 0.001
 DefaultValue = 0.012
 
 [OptionRangeFloat]
-GUIName = Vertivcal scanline brigthness
+GUIName = Vertical scanline brigthness
 OptionName = VERTICAL_INTENSITY
 MinValue = 0
 MaxValue = 1
@@ -35,13 +35,13 @@ DefaultValue = 1.24
 [/configuration]
 */
 void main() {
-	float currentMillis = mod(GetTime() / float(1000.0), float(SYNC)) * SPEED;
+	float currentMillis = fmod(GetTime() / float(1000.0), float(SYNC)) * SPEED;
 	float2 coords = GetCoordinates(); 
 	float lineCount = GetWindowResolution().y / VERTICAL_SIZE;
 
 	int lineIndex = int((coords.y + currentMillis) * lineCount);
 
-	float lineIntensity = mod(float(lineIndex), 2);
+	float lineIntensity = fmod(float(lineIndex), 2);
 
 	float4 c = Sample() * clamp(lineIntensity, VERTICAL_INTENSITY, 1.0);
 	SetOutput(c);
