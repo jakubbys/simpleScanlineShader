@@ -48,18 +48,6 @@ Worst case scenario 2D pixel art, white backgrounds:
 ![Worst case](.images/Zelda/00_WhiteBackground.png)
 ![Worst case](.images/Auto_Modelista/00_WhiteBackground.png)
 
-Possible changes that can be introduced in the future:
----
-1. Auto-tuning given the resolution and speed.
-2. I'm not very happy that I had to use 2 divissions(modulo and ) instead of 1(modulo) for static scanlines.
-
-Known won't fix issues:
----
-1. When chainging resolution from default window size to fullscreen you might see that a couple first frames produce a glitched result.
-2. Use of modulo with an incrementing FP32 value(from `getTime()`) eventually leads to a `detune`. Basically floating-point numbers get less accurate the bigger they are leading to a `detune`, however in regular play sessions of 2 hours I haven't noticed the issue occuring. I do hope it shouldn't occur during 4-12 hour long sessions.
-3. I don't have an `1440p` nor `4k` screen, I can't synchronize the scanlines for those types of screens, I can however tune it to any resolution that is confined to `1080p`.
-4. When loading occurs the scanlines stop moving and a `big jump` occurs. This is, because the post-processing pass stops when the game doesn't push a frame. Also do note the shader operates on the `game session playtime` rather than `frame count`.
-
 License
 ---
 MIT License, afaik feel free to use in commercial projects without attribution and without sharing back the source code.
