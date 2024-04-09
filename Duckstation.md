@@ -7,16 +7,16 @@ If your computer can't pick up try the `000-Static` shaders or `substractive\` s
 
 Common
 ---
-Copy the relevant `.glsl` file onto the Shader directory.
-Those files can be found in the [duckstation folder](Duckstation/).
+Copy the relevant `.glsl` file onto the Shader directory.    
+Those files can be found in the [duckstation folder](Duckstation/).    
 
 
 Windows
 ---
-Installation folder:
-`YourDolphinInstallationFolder\resources\shaders`
-For example:
-`C:\Users\jakubby\Desktop\Duckstation\resources\shaders`
+Installation folder:    
+`YourDolphinInstallationFolder\resources\shaders`    
+For example:    
+`C:\Users\jakubby\Desktop\Duckstation\resources\shaders`    
 
 MacOS
 ---
